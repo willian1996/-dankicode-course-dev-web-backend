@@ -1,0 +1,13 @@
+ORIENTAÇÃO A OBJETOS NO PHP OU POO
+
+
+Pessoa{
+    nome
+    idade
+    peso
+    
+    comer()
+    beber()
+
+
+}
