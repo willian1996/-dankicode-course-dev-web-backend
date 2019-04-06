@@ -5,12 +5,21 @@ $pdo = new PDO("mysql:host=localhost;dbname=modulo8", "root", "");
 if(isset($_POST['acao'])){
     $nome = $_POST['nome'];
     $sobrenome = $_POST['sobrenome'];
-    $momento_registro = date("Y-m-d H:i:s");
+    $momentoRegistro = date("Y-m-d H:i:s");
     
-    $sql = "INSERT INTO clientes ('nome', 'sobrenome', 'momento_registro') VALUES (null, ?, ?, ?)";
-    $sql = $pdo->prepare($sql);
-    $sql->execute([$nome, $sobrenome, $momento_registro]);
+    try{
+        $sql = "INSERT INTO clientes (nome, sobrenome, momentoRegistro) VALUES (:nome, :sobrenome, :momentoRegistro)";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue(":nome", $nome);
+        $sql->bindValue(":sobrenome", $sobrenome);
+        $sql->bindValue(":momentoRegistro", $momentoRegistro);
+        $sql->execute();
     echo "Cliente inserido com sucesso";
+        
+    }catch(PDOException $e){
+        echo "Erro: ".$e->getMessage();
+    }
+    
 }
 ?>
 <!DOCTYPE html>
