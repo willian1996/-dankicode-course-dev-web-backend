@@ -2,7 +2,7 @@
 
 try{
     $pdo = new PDO("mysql:dbname=bd_teste;host=localhost", "root", "");
-    $sql = $pdo->prepare("SELECT * FROM clientes GROUP BY ");
+    $sql = $pdo->prepare("SELECT * FROM clientes ORDER BY nome ASC LIMIT 3");
     $sql->execute();
     $clientes = $sql->fetchAll();
     foreach($clientes as $key =>$value){
