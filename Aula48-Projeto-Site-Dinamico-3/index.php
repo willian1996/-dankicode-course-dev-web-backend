@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,14 @@
     <title>Projeto 01</title>
 </head>
 <body>
+<?php
+//    echo $_GET['url'];
+    
+?>
     
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div><!--logo-->
+            <div class="logo left"><a href="index.php">Logomarca</a></div><!--logo-->
             <nav class="desktop right">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -123,5 +127,7 @@
         </div><!--center-->
     </footer>
     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
