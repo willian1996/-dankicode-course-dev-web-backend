@@ -24,7 +24,7 @@
                     <li><a href="">Home</a></li>
                     <li><a href="">Sobre</a></li>
                     <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="pages/contato.php">Contato</a></li>
                 </ul>
             </nav><!--desktop-->
             <nav class="mobile right">
@@ -33,10 +33,10 @@
                 
                 </div>
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="">Sobre</a></li>
                     <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="pages/contato.php">Contato</a></li>
                 </ul>
             </nav><!--mobile-->
         </div><!--center-->
